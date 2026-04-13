@@ -2,7 +2,9 @@ const fs = require('fs');
 const path = require('path');
 const Datastore = require('nedb-promises');
 
-const dataDir = path.join(__dirname, '..', 'data');
+const dataDir = process.env.VERCEL
+  ? '/tmp/mindcraft-data'
+  : path.join(__dirname, '..', 'data');
 if (!fs.existsSync(dataDir)) {
   fs.mkdirSync(dataDir, { recursive: true });
 }
