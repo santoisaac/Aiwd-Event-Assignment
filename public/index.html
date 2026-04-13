@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mindcraft Events 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">Mindcraft 2026</div>
+    <nav class="menu">
+      <a href="#events">Events</a>
+      <a href="#register">Register</a>
+      <a href="#status">Status</a>
+    </nav>
+  </header>
+
+  <main class="page-wrap">
+    <section class="hero">
+      <p class="eyebrow">Tech Festival Season</p>
+      <h1>Build, Learn, and Compete Across Signature Mindcraft Events</h1>
+      <p class="hero-copy">Join curated workshops, flagship hackathons, and robotics competitions with mentors, judges, and industry partners.</p>
+      <div class="countdown" id="countdown"></div>
+      <a class="hero-cta" href="#events">Explore Events</a>
+    </section>
+
+    <section class="events" id="events">
+      <div class="section-head">
+        <h2>Featured Events</h2>
+        <p>Filter by category or search by keyword.</p>
+      </div>
+      <div class="filters">
+        <input type="text" id="searchInput" placeholder="Search by title, category, location...">
+        <select id="categoryFilter">
+          <option value="All">All Categories</option>
+        </select>
+      </div>
+      <div id="eventsGrid" class="events-grid"></div>
+    </section>
+
+    <section class="register" id="register">
+      <div class="section-head">
+        <h2>Register For Event</h2>
+        <p>Select an event card or choose from the list below.</p>
+      </div>
+      <form id="eventForm" class="form-panel">
+        <input type="hidden" id="eventId" required>
+        <label for="eventSelect">Event</label>
+        <select id="eventSelect" required></select>
+        <label for="name">Full Name</label>
+        <input type="text" id="name" placeholder="Full Name" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="Email" required>
+        <label for="phone">Phone</label>
+        <input type="text" id="phone" placeholder="Phone" required>
+        <label for="college">College</label>
+        <input type="text" id="college" placeholder="College" required>
+        <button type="submit">Complete Registration</button>
+      </form>
+      <p id="msg" class="message"></p>
+    </section>
+
+    <section class="status" id="status">
+      <h3>System Status</h3>
+      <p id="healthInfo">Checking connection...</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">Mindcraft Events Platform</footer>
+  <script src="script.js"></script>
+</body>
+</html>
